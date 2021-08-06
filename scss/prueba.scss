@@ -187,9 +187,10 @@ nav {ul {
       .#{$deporte} {
           background-image: url('../img/#{$deporte}.jpg');
           height: $tamano;
-          color: white;
+          color: rgb(47, 255, 92);
           text-align: center;
-      }
+          font-size: 25px;   
+          }
 
   }
 
@@ -230,3 +231,5 @@ nav {ul {
       color: yellow;
       font-size: 50px; 
   }
+
+  

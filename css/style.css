@@ -146,20 +146,23 @@ nav ul {
 .Baloncesto {
   background-image: url("../img/Baloncesto.jpg");
   height: 200px;
-  color: white;
-  text-align: center; }
+  color: #2fff5c;
+  text-align: center;
+  font-size: 25px; }
 
 .futbol {
   background-image: url("../img/futbol.jpg");
   height: 200px;
-  color: white;
-  text-align: center; }
+  color: #2fff5c;
+  text-align: center;
+  font-size: 25px; }
 
 .beisbol {
   background-image: url("../img/beisbol.jpg");
   height: 200px;
-  color: white;
-  text-align: center; }
+  color: #2fff5c;
+  text-align: center;
+  font-size: 25px; }
 
 /*Aplicando MAPAS*/
 .fondo--baloncesto {
