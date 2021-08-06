@@ -100,40 +100,133 @@ nav {ul {
 
    /*style 404*/
 
-  .error {
-      background-image: url(../img/fondo.jpg);
-      height:100vh;
-  }
-
-  .error1 {
-      font-size: 100px;
-      text-align: center;
-      color: rgb(255, 187, 0);
-      border: 5px solid black;
-  }
-
-  .error2 {
-      color: white;
-      font-size: 35px;
-      text-align: center;
-  }
-
-  .flexerror {
-      display: flex;
-      color: white;
-      font-size: 35px;
-      justify-content: center  
-  }
-
-  .bajar {
-      height:100vh;
-  }
-
-  .Activo {
-      background-color: black;
-      color: white;
-      font-size:20px;
-      font-weight: bold;
-  }
+  
 
   /*Aplicando SASS al proyecto*/
+
+
+  /*aplicando SCSS a proyecto en un Backoff*/
+
+  /*VARIABLES*/
+
+  $tamano: 200px;
+  $largo: 200px;
+
+  .prueba1 {
+      background-image: url("../img/fondo.png");
+      height: 100vh;
+      
+  }
+
+  /*Condicionales*/
+
+  $baloncesto: balon;
+
+  .prueba2 {
+
+      @if $largo+250>$tamano {
+          border: 2px solid black
+      }
+
+
+      @if $largo==200px {
+          background-color: rgba(255, 0, 0, 0.781);
+          font-size: ($largo + $tamano)/6;
+          text-align: center;
+          color: white;
+
+
+      }
+
+      @else if $largo < 600px {
+          background-color: rgba(72, 72, 221, 0.904);
+          color: white;
+          text-align: center;
+          font-size: $tamano/4;
+      }
+
+      @else if $largo>600px {
+          background-color: rgba(153, 205, 50, 0.884);
+          color: rgb(28, 149, 185);
+          font-size: $tamano/4;
+          text-align: center;
+      }
+
+
+
+  }
+
+  ;
+
+  /*bucles*/
+
+  /*sin incluir la 4ta linea*/
+  @for $tamano from 1 to 4 {
+      .Prueba3-#{$tamano} {
+          font-size:  40px * $tamano;
+          color: whitesmoke;
+          text-align: center;
+      }
+  }
+
+  /*incluyendo la 4ta linea*/
+  @for $tamano from 1 through 4 {
+      .Prueba4-#{$tamano} {
+          width: 100% * $tamano;
+          color: whitesmoke;
+          font-size: $tamano;
+          text-align: center;
+      }
+  }
+
+  /* Aplicando EACH*/
+
+  @each $deporte in Baloncesto,
+  futbol,
+  beisbol {
+      .#{$deporte} {
+          background-image: url('../img/#{$deporte}.jpg');
+          height: $tamano;
+          color: white;
+          text-align: center;
+      }
+
+  }
+
+  /*Aplicando MAPAS*/
+
+  $deporte: (baloncesto: blue,
+      futbol:green,
+      beisbol: orange,
+  );
+
+  @each $deporte-color,
+  $bgcolor in $deporte {
+      .fondo--#{$deporte-color} {
+          background-color: $bgcolor;
+      }
+  }
+
+  /*extend*/
+
+  .prueba {
+      color: white;
+      text-align: center;
+     
+
+  }
+
+  .prueba-extend {
+      @extend .prueba;
+      font-style: italic;
+      text-decoration: underline;
+    
+  }
+
+  /*noticias*/
+
+  .noticias {
+      text-decoration: none;
+      color: yellow;
+      font-size: 50px; 
+  }

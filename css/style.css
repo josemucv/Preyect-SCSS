@@ -85,34 +85,103 @@ nav ul {
   color: blue; }
 
 /*style 404*/
-.error {
-  background-image: url(../img/fondo.jpg);
+/*Aplicando SASS al proyecto*/
+/*aplicando SCSS a proyecto en un Backoff*/
+/*VARIABLES*/
+.prueba1 {
+  background-image: url("../img/fondo.png");
   height: 100vh; }
 
-.error1 {
-  font-size: 100px;
+/*Condicionales*/
+.prueba2 {
+  border: 2px solid black;
+  background-color: rgba(255, 0, 0, 0.781);
+  font-size: 66.66667px;
   text-align: center;
-  color: #ffbb00;
-  border: 5px solid black; }
+  color: white; }
 
-.error2 {
-  color: white;
-  font-size: 35px;
+/*bucles*/
+/*sin incluir la 4ta linea*/
+.Prueba3-1 {
+  font-size: 40px;
+  color: whitesmoke;
   text-align: center; }
 
-.flexerror {
-  display: flex;
+.Prueba3-2 {
+  font-size: 80px;
+  color: whitesmoke;
+  text-align: center; }
+
+.Prueba3-3 {
+  font-size: 120px;
+  color: whitesmoke;
+  text-align: center; }
+
+/*incluyendo la 4ta linea*/
+.Prueba4-1 {
+  width: 100%;
+  color: whitesmoke;
+  font-size: 1;
+  text-align: center; }
+
+.Prueba4-2 {
+  width: 200%;
+  color: whitesmoke;
+  font-size: 2;
+  text-align: center; }
+
+.Prueba4-3 {
+  width: 300%;
+  color: whitesmoke;
+  font-size: 3;
+  text-align: center; }
+
+.Prueba4-4 {
+  width: 400%;
+  color: whitesmoke;
+  font-size: 4;
+  text-align: center; }
+
+/* Aplicando EACH*/
+.Baloncesto {
+  background-image: url("../img/Baloncesto.jpg");
+  height: 200px;
   color: white;
-  font-size: 35px;
-  justify-content: center; }
+  text-align: center; }
 
-.bajar {
-  height: 100vh; }
-
-.Activo {
-  background-color: black;
+.futbol {
+  background-image: url("../img/futbol.jpg");
+  height: 200px;
   color: white;
-  font-size: 20px;
-  font-weight: bold; }
+  text-align: center; }
 
-/*Aplicando SASS al proyecto*/
+.beisbol {
+  background-image: url("../img/beisbol.jpg");
+  height: 200px;
+  color: white;
+  text-align: center; }
+
+/*Aplicando MAPAS*/
+.fondo--baloncesto {
+  background-color: blue; }
+
+.fondo--futbol {
+  background-color: green; }
+
+.fondo--beisbol {
+  background-color: orange; }
+
+/*extend*/
+.prueba, .prueba-extend {
+  color: white;
+  text-align: center; }
+
+.prueba-extend {
+  font-style: italic;
+  text-decoration: underline; }
+
+/*noticias*/
+.noticias {
+  text-decoration: none;
+  color: yellow;
+  font-size: 50px; }
